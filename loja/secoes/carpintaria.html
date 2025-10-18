@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carpintaria</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fffaf0, #f2f2f2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #444;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #555;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    li {
+      background: #fff;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      padding: 10px 20px;
+      width: 250px;
+      text-align: center;
+      font-weight: 500;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    li:hover {
+      background: #f0f0f0;
+      transform: translateY(-3px);
+    }
+
+    video {
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      max-width: 90%;
+    }
+
+    .botoes {
+      margin-top: 40px;
+      display: flex;
+      gap: 15px;
+    }
+
+    a.botao {
+      background: #444;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      font-weight: 500;
+    }
+
+    a.botao:hover {
+      background: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>🪄 Carpintaria</h1>
+
+  <h2>Subcategorias</h2>
+  <ul>
+    <li></li>
+    <li></li>
+    <li>Utensílios</li>
+  </ul>
+
+  <h2>🎥 Vídeo Guia</h2>
+  <video width="600" controls>
+    <source src="videos/cozinhas.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
+  </video>
+
+  <div class="botoes">
+    <a href="../index.html?view=shop" class="botao">⬅ Voltar às Seções</a>
+    <a href="../index.html" class="botao">🏠 Voltar à Loja</a>
+  </div>
+</body>
+</html>
