@@ -4,6 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Loja Game</title>
+
+<!-- ÍCONE DA ABA DO NAVEGADOR -->
+<link rel="icon" type="image/png" href="./public/logo.png" />
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
@@ -145,7 +149,7 @@ body {
   width: 140px;
   height: 140px;
   background: #006400;
-  border: 3px solid #5c3317;
+  border: 3px solid #0b4300;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -153,9 +157,9 @@ body {
   align-items: center;
   font-size: 0.6rem;
   font-weight: bold;
-  color: #000000;
+  color: #fff;
   text-align: center;
-  box-shadow: 4px 4px 0 #5c3317, -2px -2px 0 #d2b48c;
+  box-shadow: 4px 4px 0 #164800, -2px -2px 0 #d2b48c;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s, z-index 0.3s;
   image-rendering: pixelated;
@@ -165,14 +169,14 @@ body {
 
 .section:hover {
   transform: translateY(-15px) scale(1.05);
-  color: #000000;
+  color: #fff;
   box-shadow: 8px 8px 0 #006400, -4px -4px 0 #d2b48c;
   z-index: 10;
 }
 
 
 .section span {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 6px;
   text-shadow: 1px 1px #d2b48c, 2px 2px rgba(0,0,0,0.3);
 }
