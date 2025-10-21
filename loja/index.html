@@ -119,7 +119,7 @@ body {
 .npc {
   width: 500px;
   height: 500px;
-  background: url('./public/novinNPC.png') no-repeat center center / contain;
+  background: url('./public/npc2.png') no-repeat center center / contain;
   animation: float 2s ease-in-out infinite;
 }
 
@@ -242,7 +242,7 @@ let walking = false;
 // Função para exibir a loja
 function showShop() {
     // ESTA LINHA ESTÁ CORRETA: Muda o fundo do BODY
-    body.style.backgroundImage = "url('./public/dentroLoja.jpg')"; 
+    body.style.backgroundImage = "url('./public/dentroloja.jpg')"; 
     startScreen.style.display = "none";
     shop.style.display = "flex";
 
@@ -271,7 +271,48 @@ function initializeGame() {
 
     npcContainer.style.left = npcPos.x + 'px';
     npcContainer.style.bottom = npcPos.y + 'px';
+
+    // ======== INÍCIO DA ADIÇÃO ========
+    // Array de imagens do NPC
+    const npcImages = [
+      './public/npc2.png',
+      './public/npc3.png',
+      './public/npc1.png',
+    ];
+    let currentFrame = 0;
+
+    // Animação do NPC
+    setInterval(() => {
+        if(npc) {
+            npc.style.backgroundImage = `url('${npcImages[currentFrame]}')`;
+            currentFrame = (currentFrame + 1) % npcImages.length;
+        }
+    }, 2000);
+     
+    const npcDialogue = [
+      "Olá! Bem vindo A loja Leroy Merlin!",
+      "Escolha uma seção da loja!",
+      "Temos ótimas ofertas!",
+      "Precisa de ajuda? Estou aqui!",
+      "Explore nossas seções incríveis!"
+    ];
+    let currentDialogue = 0;
+     
+    setInterval(() => {
+      const npcText = document.querySelector('.npc-text');
+      if(npcText){
+        npcText.innerText = npcDialogue[currentDialogue];
+        currentDialogue = (currentDialogue + 1) % npcDialogue.length;
+      }
+    }, 2000);
     
+
+    // Define diálogo inicial
+     const npcText = document.querySelector('.npc-text');
+      if(npcText){
+      npcText.innerText = "Olá! Bem vindo A loja Leroy Merlin!";
+      }
+    // ======== FIM DA ADIÇÃO ========
 
     sections.forEach(sec => {
         sec.addEventListener("click", () => {
@@ -284,8 +325,8 @@ function initializeGame() {
             window.location.href = url;
         });
     });
-
 }
+
 
 
 // Lógica para voltar direto para a loja (NÃO PRECISA MUDAR)
