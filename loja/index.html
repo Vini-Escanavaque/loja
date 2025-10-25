@@ -266,6 +266,13 @@ body {
     height: 110px;
     font-size: 0.6rem;
   }
+  .sections-wrapper {
+  width: 100%;
+  overflow-y: auto;
+  max-height: 80vh; /* para ocupar a tela sem cortar o resto */
+  padding: 10px 0;
+}
+
 }
 
 /* Celulares pequenos (até 480px) */
@@ -307,8 +314,8 @@ body {
   .sections-container {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin: 20px 0;
+    gap: 20px;
+    margin-left:  0;
   }
 
   .section {
@@ -335,12 +342,15 @@ body {
       <button id="startBtn">Entrar</button>
     </div>
   </div>
+<div id="shop">
+  <div id="npc-container-placeholder"></div>
 
-  <div id="shop">
-    <div id="npc-container-placeholder"></div>
+  <!-- WRAPPER COM SCROLL -->
+  <div class="sections-wrapper">
     <div id="sections-container-placeholder"></div>
   </div>
 </div>
+
 
 <script>
 const startBtn = document.getElementById("startBtn");
